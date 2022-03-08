@@ -3,5 +3,9 @@
 
 weight = int(input("Please enter your weight (kg): "))
 height = int(input("Please enter your height (cm): "))
-bmi = float(weight / ((height / 100)**2))
-print("Your BMI is: {}".format(bmi))
+bmi = round(float(weight / ((height / 100)**2)), 2)         
+
+# bmi formula searched online, Uom is kg/m2, hence formula to convert the heaight from cm to m. Change type to float to allow for decimal results.
+# using the round() function to ensure that the solution is displayed up to two decimals
+
+print("Your BMI is (kg/m2): {}".format(bmi))
