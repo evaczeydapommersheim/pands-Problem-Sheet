@@ -10,7 +10,7 @@ def letterQuantity():       #defining a function to do the required subtasks (re
 
     # js is for Java Script, there is a module in python "js2py" which translates 
     # Source:  https://www.infoworld.com/article/3209651/how-to-convert-python-to-javascript-and-back-again.html
-    file = open("Filename/URL", 'r')
+    file = open("fileName/URL", 'r')
 
     #2. The file content would need to be stored as a variable
     content = file.read()
@@ -20,5 +20,5 @@ def letterQuantity():       #defining a function to do the required subtasks (re
     return content.count("e")
 
     #4. display the number of characters
-print(letterQuantity("Filename/URL", "e"))
+print(letterQuantity("fileName/URL", "e"))
     
