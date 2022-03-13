@@ -2,24 +2,22 @@
 
 # Author: Eva Czeyda-Pommersheim
 
-filename = r"C:\Users\Dancsa\Desktop\GMIT_PANDS2022\Evawork\week07\moby-dick.txt" 
-# SyntaxError: (unicode error) 'unicodeescape' codec 
-# can't decode bytes in position 2-3: truncated \UXXXXXXXX escape
-# above message was received when running the program 
-# googled the error message and selected the solution to add an r before the path, 
-# alternative solution could have been to add double backward slash as a separator(\\)
-# Source: https://exerror.com/syntaxerror-unicode-error-unicodeescape-codec-cant-decode-bytes-in-position-2-3-truncated-uxxxxxxxx-escape/
+# create a file called moby-dick.txt using the request module in python
+# in order to get access to the text file of the book Moby Dick using a URL
+# by using writing the file it will be created in the folder where the program will run
+# sources: https://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-urllib3-and-requests-modul
+#  https://www.gutenberg.org/files/2701/old/moby10b.txt
 
-def letterQuantity(filename):       #defining a function to do the required subtasks (researched online best ways to count a character in a text)
-    #1. we need to read in the text file.
-    # Sources: https://www.pythontutorial.net/python-basics/python-read-text-file/ // https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/
-    
-   with open(filename, 'rt') as f:
-       content = f.read() #2. The file content would need to be stored as a variable
-       return content.count("e") 
-        #3. Use the count() method to as explained in W3 Schools () syntax being: list.count(value) Any type (string, number, list, tuple, etc.). The value to search for.
-        # Source: https://www.w3schools.com/python/ref_list_count.asp
-   
-    #4. display the number of characters
-letterE = letterQuantity(filename)
-print(letterE)
+import requests
+file = "moby-dick.txt"
+with open(file, "wt") as f1:
+    f1.write((requests.get('https://www.gutenberg.org/files/2701/old/moby10b.txt').text))
+
+# using the import sys module so that this file can be accessed as an argument in the command line
+# argv[1] being the second element of the list object that is created by importing sys module
+# and using it to add argument via the command line
+import sys
+filename = sys.argv[1]
+with open(filename, 'rt') as f:     # opens the file defined under the argv[1]
+    content = f.read()              # reads the file
+print(content.count("e"))           # using the count() built in function it counts the number of string/character "e"
