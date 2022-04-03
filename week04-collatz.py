@@ -8,17 +8,20 @@
 
 # Author: Eva Czeyda-Pommersheim
 
-num = int(input('Please enter a positiv integer: '))
-
-print(num)              # prints out the starting number
-while num != 1:         # WHILE LOOP WILL CONTINUE UNTIL THE OUTCOME IS EQUAL TO 1.
-    if num <= 0:        # The program prompts to only enter numbers greater than zero.
-        print('Please enter a number greater than 0.')
-        num = int(input('Please enter a positiv integer: '))
-    elif num % 2 == 0:    # NUMBERS DIVIDED BY 2 WITH NO REMAINDER ARE EVEN NUMBERS
-        num = num / 2
-        print(int(num))     # Print the result, while loop will continue to do the calculation.
-    else:
-        num = (num * 3) + 1     #  if the number is not even, the if condition is False AND PROGRAM WILL EXECUTE THE ELSE CONDITION
-        print(int(num))      # Print the result, while loop will continue to do the calculation.       
+def collatz(number, step=0):        # defining a function with 2 arguments: the number and the iteration for the while loop
+    
+    while number != 1:
+        print(number)               # printing the number that is entered outside the function
+        step += 1                   # iterating through the loop until number becomes = 1
+        if number % 2 == 0:     # number is even
+            number = int(number // 2)
        
+        else:
+            number = int(3*number + 1)  # number is odd
+    print(int(number))
+
+try:
+    number = abs(int(input("Please enter a positiv integer: "))) # using absolute value in case a negative number is entered         
+    collatz(number)
+except ValueError:              # exception in case a float or string is entered
+    raise ValueError("a positive integer is required")

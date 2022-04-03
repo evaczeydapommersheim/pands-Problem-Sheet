@@ -1,10 +1,11 @@
-# This program reads in text file created as week07CreateFile.py, then outputs the number of e's it contains.
+# This program reads in text file moby-dick.txt, then outputs the number of e's it contains.
+# The program is to take the filename from an argument on the command line.
 
 # Author: Eva Czeyda-Pommersheim
 
 # create a file called moby-dick.txt using the request module in python
-# in order to get access to the text file of the book Moby Dick using a URL
-# by using writing the file it will be created in the folder where the program will run
+# in order to get access to the text file of the book Moby Dick. The request module uses the URL
+# to access the file content and it creates the moby-dick.txt file in the folder where the program will run
 # sources: https://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-urllib3-and-requests-modul
 #  https://www.gutenberg.org/files/2701/old/moby10b.txt
 

@@ -36,4 +36,18 @@
 - https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/#:~:text=Let%20N%20be%20any%20number,correct%20square%20root%20of%20N   
 - https://www2.math.upenn.edu/~kazdan/202F09/sqrt.pdf
 ---
+## Week07 Weekly Task
+### **Returning the number of "e" letters after reading in a txt file**
+### ***This program reads in text file moby-dick.txt, then outputs the number of e's it contains. The program is to take the filename from an argument on the command line.***
+### ***Sources***:
+- https://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-urllib3-and-requests-modul
+- https://www.gutenberg.org/files/2701/old/moby10b.txt
+
+---
+## Week08 Weekly Task
+### **Plotting functions of x**
+### ***This program imports the necessary modules with the aim to plot/visually present the functions of value "x" ranging from 0 to 4 inclusively.***
+### ***Source***:
+- https://www.w3schools.com/python/matplotlib_intro.asp
+---
 *Author: Eva Czeyda-Pommersheim*
