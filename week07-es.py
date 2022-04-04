@@ -21,4 +21,4 @@ import sys
 filename = sys.argv[1]
 with open(filename, 'rt') as f:     # opens the file defined under the argv[1]
     content = f.read()              # reads the file
-print(content.count("e"))           # using the count() built in function it counts the number of string/character "e"
+print(content.count("e"))           # using the count() Python String method (https://www.w3schools.com/python/python_ref_string.asp) it counts the number of string/character "e"

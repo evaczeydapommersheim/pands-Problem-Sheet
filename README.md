@@ -42,6 +42,7 @@
 ### ***Sources***:
 - https://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-urllib3-and-requests-modul
 - https://www.gutenberg.org/files/2701/old/moby10b.txt
+- https://www.w3schools.com/python/python_ref_string.asp
 
 ---
 ## Week08 Weekly Task
